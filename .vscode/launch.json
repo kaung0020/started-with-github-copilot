@@ -16,6 +16,36 @@
         "src/static/*"
       ],
       "jinja": true
+    },
+    {
+      "name": "Debug Tests (pytest)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": [
+        "-v",
+        "${file}"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Debug Current Script",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Attach to Running Process",
+      "type": "debugpy",
+      "request": "attach",
+      "listen": {
+        "host": "localhost",
+        "port": 5678
+      },
+      "justMyCode": true
     }
   ]
 }
